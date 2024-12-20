@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Big+Shoulders+Display:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend+Deca:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Protest+Revolution&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+  #7ac8ff, #0095ff, #0048ffaf
+  );
+  padding: 20px;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  margin: 10% auto;
+  padding: 40px 30px 70px;
+  border-radius: 20px;
+  img {
+    width: 50px;
+    margin-left: 10px;
+  }
+  h1 {
+    color: #0048c4;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(226, 226, 226);
+  border-radius: 30px;
+  padding-left: 10px;
+  margin-bottom: 25px;
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 18px;
+  }
+  button {
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    background-color: rgb(255, 89, 0);
+    border-radius: 30px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+ul li {
+  list-style: none;
+  font-size: 18px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+span {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 2em;
+  color: #555;
+  border-radius: 50%;
+}
+
+span:hover {
+  background-color: #edeef0;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  height: 25px;
+  width: 25px;
+  background-image: url(unchecked.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+li.checked {
+  color: #767676;
+  text-decoration: line-through;
+}
+
+li.checked::before {
+  content: '';
+  background-image: url(checked.png);
+}
